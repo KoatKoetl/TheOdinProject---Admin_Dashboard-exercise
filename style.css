@@ -3,14 +3,15 @@
   padding: 0;
 }
 .container {
-  height: 100vh;
   display: grid;
   grid-template: 1fr 2fr / 1fr 5fr;
   gap: 20px;
+  min-height: 100vh;
 }
 .header {
   grid-column: 2 / 3;
 }
+/* Start side bar styles */
 .sideBar {
   grid-column: 1 / 2;
   grid-row: 1 / 3;
@@ -24,6 +25,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  font-size: 1.8rem;
 }
 .logo .logoImage {
   width: 40px;
@@ -32,12 +34,18 @@
   list-style-type: none;
   padding-left: 10px;
   margin: 40px 0;
-  font-size: 14px;
+  font-size: 1.4rem;
 }
 .menu li {
   display: flex;
   align-items: center;
   gap: 20px;
+}
+.menu li:hover {
+  color: white;
+}
+.menu li:active {
+  color: darkred;
 }
 .upperList li {
   margin-bottom: 15px;
@@ -46,5 +54,94 @@
   margin-bottom: 15px;
 }
 .menu .icon {
-  width: 18px;
+  width: 10%;
 }
+/* End side bar styles */
+
+/* Start header styles */
+.header {
+  padding: 5px;
+  font-family: "Anton", sans-serif;
+  font-family: "Arvo", serif;
+  font-family: "Oswald", sans-serif;
+}
+.topBlock > .searchBar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+.searchBar .left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 70%;
+}
+.searchBar .right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 1.2rem;
+}
+.searchBar input {
+  width: 100%;
+  padding: 5px;
+  border-radius: 15px;
+  border: 2px solid black;
+  background-color: #facc151f;
+  padding-left: 1rem;
+}
+.searchBar .profileImage {
+  width: 10%;
+}
+.searchIcon {
+  width: 15px;
+}
+.bellIcon {
+  width: 15px;
+}
+
+.bottomBlock > .profile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 15%;
+}
+
+.profile > .left {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+.left .userName {
+  font-size: 1.6rem;
+}
+.profile > .right {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2em;
+}
+.left > .profileImage {
+  width: 15%;
+}
+
+.profile > .right > button {
+  font-size: 1rem;
+  padding: 8px 25px;
+  border-radius: 20px;
+  border: none;
+  background-color: #facc15b0;
+  font-weight: bold;
+}
+.profile > .right > button:hover {
+  color: white;
+}
+.profile > .right > button:active {
+  background-color: #facc1577;
+  color: darkred;
+}
+
+/* End header styles */
+/*  */
